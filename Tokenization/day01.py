@@ -33,5 +33,5 @@ add_vocab(token_add)
 print(encoding(token_add))
 
 # TEST 2
-token_add = tokenize("No World!")
+token_add = tokenize("No World!") # 존재하지 않는 토큰 단어 호출
 print(encoding(token_add))
