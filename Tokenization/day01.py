@@ -1,7 +1,7 @@
 import re # 정규 표현식 라이브러리
 
 vocab = {} # 사전 정의
-idx = 1 # 사전 요소 카운트
+idx = 10005 # 사전 요소 카운트
 
 def tokenize(text):
     text = text.lower()
@@ -24,7 +24,7 @@ def encoding(tokens):
             encoded.append(vocab[token]) # 그렇다면 숫자로 인코딩하라
         else:
             not_in.append(token)
-            print(f"\"{token}\" is not token!")
+            print(f"[!System : \"{token}\" is not token!]")
     return encoded
     
 # TEST 1
