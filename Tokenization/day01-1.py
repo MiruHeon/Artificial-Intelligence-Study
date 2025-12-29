@@ -35,3 +35,9 @@ print(encoding(token_add))
 # TEST 2
 token_add = tokenize("No World!") # 존재하지 않는 토큰 단어 호출
 print(encoding(token_add))
+
+
+# 오늘의 상식
+# 토큰화 : 단어 나누기
+# vocab은 사실상 단어사전이다
+# 토큰화 된 결과는 임베딩 레이어랑 연결된다
