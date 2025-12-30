@@ -12,7 +12,13 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # 임베딩 모듈 [AI가 알아듣는 규칙 만들기]
-from tensorflow.keras.layers import Embedding
+from tensorflow.keras.layers import Embedding, Flatten, Dense # Flatten : 1차원 벡터 변환 , Dense : 가중치+편향 후 활성화 함수 적용
+
+# 레이어 쌓기 [모델 만들기] (방향 : 위에서 아래로) (순서 : 입력 → 처리 → 처리 → 출력)
+from tensorflow.keras.models import Sequential
+
+# 데이터 타입 추가
+import numpy as np
 
 # ______________________________________________________________________
 
@@ -52,3 +58,31 @@ embedding = Embedding(
 
 embedded = embedding(padded) # 임베딩 결과
 print(embedded)
+
+# ④ 모델 정의
+model = Sequential([
+    Embedding(input_dim=1000, output_dim=8, input_length=5), # 임베딩 정의
+    Flatten(), # 1차원 벡터로 정렬
+    Dense(1, activation="sigmoid") # sigmoid 활성화 함수 적용
+])
+
+model.compile(                 # 학습 규칙 설명
+    optimizer="adam",          # 틀린 정도를 보고 파라미더를 어떻게 수정할 지 정하는 알고리즘 (학습률 자동 조절)
+    loss="binary_crossentropy" # 정답과 예측이 얼마나 다른지 수치화
+)
+
+model.summary() # 최종 모델 설계도 출력
+
+# ⑤ 모델 가동
+x = padded # 입력값
+y = np.array([1]) # 정답값(임시) [numpy 배열을 쓰는 이유는 다차원 그리드 데이터 구조를 맞춰줘야 하기 때문이다]
+
+model.fit( # 모델 가동 함수
+    x, # 입력
+    y, # 정답
+    epochs=5, # 전체 학습 데이터를 5번 학습 시켜라
+    verbose=1 # 정보 출력
+)
+
+pred = model.predict(x) # 입력값이 얼마나 정답값에 가까운가? (예측도)
+print(pred)
