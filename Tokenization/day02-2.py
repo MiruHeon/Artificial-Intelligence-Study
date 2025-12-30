@@ -1,3 +1,7 @@
+# python -m venv venv     [venv : 환경 맞추기 (docker)같은 존재]
+# .\venv\Scripts\activate [venv 활성화]
+# Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process  [venv 활성화 명령어 실행 권한 부여]
+
 # pip install tensorflow [텐서플로 라이브러리]
 # keras : 딥 러닝 모델을 빌드하고 학습시키기 위한 Tensorflow의 상위 수준 API
 
