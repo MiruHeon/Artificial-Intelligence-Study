@@ -1,6 +1,6 @@
 import re # 정규 표현식 라이브러리
 
-vocab = {} # 사전 정의
+vocab = {} # 사전 정의 
 idx = 1001 # 사전 요소 카운트
 
 def tokenize(text):
