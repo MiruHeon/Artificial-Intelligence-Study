@@ -15,3 +15,9 @@ AI(Artificial-Intelligence-Study)는 말 그대로 "인공적인 지능" 인간�
 [AI 기초](https://www.notion.so/2026-3db17316d04f80f3ab0dd81006de4b2c?source=copy_link)
 
 [딥러닝](https://app.notion.com/p/Deep-learning-27817316d04f81a89589f295d5592e06)
+
+## 스터디 인원
+| 류용헌 |
+|:------:|
+| <img src="https://github.com/MiruHeon/Normal-Project/blob/main/profile.png?raw=true" alt="류용헌" width="150"> |
+| SL |
