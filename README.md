@@ -19,5 +19,5 @@ AI(Artificial-Intelligence-Study)는 말 그대로 "인공적인 지능" 인간�
 ## 스터디 인원
 | 류용헌 |
 |:------:|
-| <img src="https://github.com/MiruHeon/Normal-Project/blob/main/profile.png?raw=true" alt="류용헌" width="150"> |
+| <img src="https://github.com/MiruHeon/Normal-Project/blob/main/momong.jpg?raw=true" alt="류용헌" width="150"> |
 | SL |
